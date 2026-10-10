@@ -268,6 +268,97 @@
   /* ── SECTIONS ── */
   section { padding: 96px 40px; }
 
+  /* ── VÍDEOS ── */
+  #videos { background: var(--white); }
+
+  .videos-intro {
+    max-width: 680px;
+    margin-bottom: 56px;
+  }
+
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .video-card {
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .video-card:hover {
+    box-shadow: 0 8px 32px rgba(15,27,21,0.10);
+    transform: translateY(-3px);
+  }
+
+  .video-embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: var(--ink);
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+
+  .video-info {
+    padding: 20px 22px 24px;
+  }
+
+  .video-tag {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .video-info h3 {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .video-info p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .videos-cta {
+    margin-top: 44px;
+    text-align: center;
+  }
+
+  .videos-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--leaf);
+    text-decoration: none;
+    border: 1.5px solid var(--leaf);
+    padding: 11px 24px;
+    border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .videos-cta a:hover { background: var(--leaf); color: white; }
+
   .container { max-width: 1100px; margin: 0 auto; }
 
   .section-label {
@@ -750,6 +841,7 @@
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#dtm">DTM</a></li>
+    <li><a href="#videos">Vídeos</a></li>
     <li><a href="#formacao">Formação</a></li>
     <li><a href="#pesquisa">Pesquisa</a></li>
     <li><a href="#agendar" class="nav-cta">Agendar consulta</a></li>
@@ -902,6 +994,80 @@
         <h3>Cefaleia Orofacial</h3>
         <p>Dores de cabeça cuja origem está nas estruturas orofaciais — músculos temporais, ATM, dentes. Muitas cefaleias classificadas como tensionais ou enxaquecas têm componente orofacial tratável.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- VÍDEOS EDUCATIVOS -->
+<!-- INSTRUÇÕES: substitua os IDs do YouTube abaixo pelos IDs reais dos seus vídeos.
+     Exemplo: https://youtu.be/XXXXXXXXXX → use XXXXXXXXXX como o ID -->
+<section id="videos">
+  <div class="container">
+    <div class="section-label">Canal</div>
+    <h2 class="section-title">Ciência explicada de forma <em>acessível</em></h2>
+    <div class="videos-intro">
+      <p class="section-lead">Conteúdo baseado em evidências científicas para ajudar pacientes a compreender melhor suas condições e tomar decisões informadas sobre seu tratamento.</p>
+    </div>
+
+    <div class="videos-grid">
+
+      <div class="video-card">
+        <div class="video-embed">
+          <!-- Substitua SEU_VIDEO_ID_1 pelo ID do vídeo no YouTube -->
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/SEU_VIDEO_ID_1?rel=0&modestbranding=1"
+            title="O que é DTM — Disfunção Temporomandibular?"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-tag">DTM · Introdução</div>
+          <h3>O que é DTM e como ela afeta sua vida?</h3>
+          <p>Entenda em linguagem clara o que acontece na articulação temporomandibular e por que essa condição é frequentemente subdiagnosticada.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-embed">
+          <!-- Substitua SEU_VIDEO_ID_2 pelo ID do vídeo no YouTube -->
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/SEU_VIDEO_ID_2?rel=0&modestbranding=1"
+            title="Bruxismo: o que a ciência realmente diz"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-tag">Bruxismo · Evidência</div>
+          <h3>Bruxismo: o que a ciência realmente diz</h3>
+          <p>Desmistificando o bruxismo à luz das pesquisas mais recentes — da neurociência ao tratamento baseado em evidências.</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-embed">
+          <!-- Substitua SEU_VIDEO_ID_3 pelo ID do vídeo no YouTube -->
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/SEU_VIDEO_ID_3?rel=0&modestbranding=1"
+            title="Dor Orofacial: quando procurar um especialista"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-info">
+          <div class="video-tag">Dor Orofacial · Diagnóstico</div>
+          <h3>Dor Orofacial: quando procurar um especialista</h3>
+          <p>Sinais de alerta que indicam a necessidade de avaliação especializada. Diagnóstico precoce é fundamental para melhores resultados clínicos.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="videos-cta">
+      <a href="https://www.youtube.com/@SEU_CANAL_YOUTUBE" target="_blank" rel="noopener">
+        ▶ Ver todos os vídeos no YouTube
+      </a>
     </div>
   </div>
 </section>
