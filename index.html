@@ -48,12 +48,44 @@
   }
 
   .nav-brand {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 48px;
+  }
+  .nav-logo-img {
+    height: 48px;
+    width: auto;
+    mix-blend-mode: multiply;
+  }
+  .nav-logo-divider {
+    display: block;
+    width: 1px;
+    height: 36px;
+    background: #C8D4CC;
+    opacity: 0.7;
+  }
+  .nav-logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .nav-logo-name {
     font-family: var(--serif);
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--leaf);
-    text-decoration: none;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.2px;
+    line-height: 1;
+  }
+  .nav-logo-specialty {
+    font-family: var(--sans);
+    font-size: 8.5px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 2.5px;
+    line-height: 1;
   }
 
   .nav-links {
@@ -837,7 +869,14 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-brand">Prof. Dr. José Stechman Neto</a>
+  <a href="#" class="nav-brand" aria-label="Prof. Dr. José Stechman Neto — DTM & Dor Orofacial">
+    <img src="logo-symbol-crop.png" alt="Símbolo S" class="nav-logo-img">
+    <span class="nav-logo-divider" aria-hidden="true"></span>
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">Prof. Dr. José Stechman Neto</span>
+      <span class="nav-logo-specialty">DTM &amp; DOR OROFACIAL</span>
+    </span>
+  </a>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#dtm">DTM</a></li>
@@ -1046,16 +1085,16 @@
       <div class="video-card">
         <div class="video-embed">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/b-yDZMxuo5w?rel=0&modestbranding=1"
-            title="Especialização em DTM e Dor Orofacial — Podcast Fala Tuiuti"
+            src="https://www.youtube-nocookie.com/embed/4ErxkdQFrYg?rel=0&modestbranding=1"
+            title="DTM e Dor Orofacial — Parte 1 — Dr. Stechman"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
           </iframe>
         </div>
         <div class="video-info">
-          <div class="video-tag">Dor Orofacial · Especialização</div>
-          <h3>DTM e Dor Orofacial: entenda a especialidade</h3>
-          <p>O que é a especialização em DTM e Dor Orofacial, quando procurar um especialista e como funciona o tratamento multidisciplinar.</p>
+          <div class="video-tag">DTM · Dor Orofacial</div>
+          <h3>DTM e Dor Orofacial: o que você precisa saber</h3>
+          <p>Introdução completa à Disfunção Temporomandibular e à Dor Orofacial — o que são, como se manifestam e por que um diagnóstico especializado faz diferença.</p>
         </div>
       </div>
 
